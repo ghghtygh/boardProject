@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>게시판 - 목록</title>
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+</head>
+<body>
+<header>
+    <div class="navbar navbar-dark bg-dark shadow-sm mb-3">
+        <div class="container d-flex justify-content-between">
+            <a href="/" class="navbar-brand d-flex align-items-center">
+                <strong>게시판</strong>
+            </a>
+        </div>
+    </div>
+</header>
+<div class="container">
+  <div class="row">
+      <div class="col-sm-2">
+          제목
+      </div>
+      <div class="col-*">
+          {{board.title}}
+      </div>
+      <div class="col-sm-2">
+          내용
+      </div>
+      <div class="col-*">
+          {{board.content}}
+      </div>
+  </div>
+</div>
+</body>
+</html>
