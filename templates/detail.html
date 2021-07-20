@@ -28,9 +28,16 @@
           내용
       </div>
       <div class="col-*">
-          {{board.content}}
+          {{board.content | safe}}
+      </div>
+      <div class="col-sm-12">
+          <a href="/">이전</a>
+          <a href="/modify/{{board.id}}">수정</a>
+          <a href="/delete/{{board.id}}">삭제</a>
       </div>
   </div>
+
+
 </div>
 </body>
 </html>

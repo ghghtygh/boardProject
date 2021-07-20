@@ -19,7 +19,7 @@
 <div class="container">
     <form action="/post" method="post">
         {% csrf_token %}
-        <div class="form-group row">
+        <!--<div class="form-group row">
             <label for="inputTitle" class="col-sm-2 col-form-label"><strong>제목</strong></label>
             <div class="col-sm-10">
                 <input type="text" name="title" class="form-control" id="inputTitle">
@@ -36,10 +36,14 @@
             <div class="col-sm-10">
                 <textarea type="text" name="content" class="form-control" id="inputContent"></textarea>
             </div>
-        </div>
+        </div>-->
+        <table class="table">
+            {{form.as_table}}
+        </table>
         <div class="row">
             <div class="col-auto mr-auto"></div>
             <div class="col-auto">
+                <a href="/">이전</a>
                 <input class="btn btn-primary" type="submit" role="button" value="글쓰기">
             </div>
         </div>

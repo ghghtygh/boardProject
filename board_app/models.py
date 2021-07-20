@@ -9,7 +9,7 @@ class Board(models.Model):
         pub_date: 배포일
     """
     title = models.CharField(max_length=100)
-    content = models.CharField(max_length=500)
+    content = models.TextField()
     author = models.CharField(max_length=100)
     like_count = models.PositiveIntegerField(default=0) # 양수입력 필드
     pub_date = models.DateTimeField()
